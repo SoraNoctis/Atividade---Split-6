@@ -3,7 +3,7 @@ export default class Base {
     static getElement(element, index = undefined) {
         let elem;
 
-        if (typeof index != "undefinded" || index > 0) {
+        if (typeof index != "undefined" || index > 0) {
             elem = cy.get(element, {timeout: Cypress.env("global_timeout")}).eq(index);
         } else {
             elem = cy.get(element, {timeout: Cypress.env("global_timeout")});
@@ -58,8 +58,12 @@ export default class Base {
         }
     }
 
-    validateURL(url) {
-        cy.url(`${Cypress.env("baseURL")}`).shoud("include", url);
+    static visitURL() {
+        cy.visit(`${Cypress.env("base_URL")}`)
+    }
+
+    static validateURL(url) {
+        cy.url(`${Cypress.env("base_URL")}`).should("include", url);
     }
 
     static validateText(baseValue, comparingValue) {

@@ -1,5 +1,6 @@
 {
     "env": {
-        "base_URL": "https://701523.commercesuite.com.br/"
+        "base_URL": "https://701523.commercesuite.com.br/",
+        "global_timeout": 30000
     }
 }

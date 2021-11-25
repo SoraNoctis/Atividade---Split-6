@@ -42,10 +42,17 @@ export default class Factory {
     }
 
     static autoAddress() {
+        const max = 4;
         return {
             "cep": `${fakerBr.address.zipCode()}`,
-            "addresssNUM": `${faker.datatype.number(max = 4)}`,
+            "addresssNUM": `${faker.datatype.number(max)}`,
             "complement": `${fakerBr.lorem.lines()}`
+        }
+    }
+
+    static randomAddress() {
+        return {
+            "cep": `${fakerBr.address.zipCode()}`
         }
     }
 

@@ -6,6 +6,6 @@ export const ROUTES = {
     URL_CHECKOUT       : "/checkout",
     URL_FRUTAS         : "/frutas",
     URL_PESCADOS       : "/pescados",
-    URL_BUSCA          : "/loja/busca.php?loja=701523&palavra_busca=",
+    URL_BUSCA          : "https://701523.commercesuite.com.br/loja/busca.php?loja=701523&palavra_busca=",
     URL_EMPRESA        : "/empresa"
 }
