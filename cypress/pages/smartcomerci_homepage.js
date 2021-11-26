@@ -1,7 +1,7 @@
 import faker from "faker";
 import Base from "./_base.page.js";
 import {ROUTES as RU} from "./components/_rotas.elements.js";
-import {SITE_HEADER as SH, HOME_SIDEBAR as SB, SITE_FOOTER as SF, HOME_CEP_FIND as CEPF} from "./components/home.elements.js";
+import {SITE_HEADER as SH, HOME_SIDEBAR as SB, SITE_FOOTER as SF, HOME_BANNER as HB, HOME_CEP_FIND as CEPF} from "./components/home.elements.js";
 import { multiply } from "lodash";
 
 export default class HomePage extends Base {
@@ -28,5 +28,45 @@ export default class HomePage extends Base {
     
     static validadeHomePage() {
         super.visitURL(RU.URL_HOME)
+    }
+
+    static clickOnSubBanner1() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_1)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner2() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_2)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner3() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_3)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner4() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_4)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner5() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_5)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner6() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_6)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner7() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_7)
+        super.validateURL(RU.URL_BANNER)
+    }
+
+    static clickOnSubBanner8() {
+        super.clickOnElement(HB.IMG_MAN_SUBBANNERS_8)
+        super.validateURL(RU.URL_BANNER)
     }
 }
