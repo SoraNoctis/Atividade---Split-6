@@ -2,7 +2,6 @@ import faker from "faker";
 import Base from "./_base.page.js";
 import {ROUTES as RU} from "./components/_rotas.elements.js";
 import {SITE_HEADER as SH, HOME_SIDEBAR as SB, SITE_FOOTER as SF, HOME_BANNER as HB, HOME_CEP_FIND as CEPF} from "./components/home.elements.js";
-import { multiply } from "lodash";
 
 export default class HomePage extends Base {
     
@@ -18,7 +17,7 @@ export default class HomePage extends Base {
     
     static pesquisar(valor) {
         super.typeValue(SH.INP_BARRAPESQUISA, valor)
-        cy.get(SH.BTN_PESQUISAR).click(25, 10, 'waitForAnimations', 'mutiple = true')
+        cy.get(SH.BTN_PESQUISAR).click()
         super.validateURL(`${RU.URL_BUSCA}${valor}`)
     }
 
